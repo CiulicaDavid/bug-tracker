@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="../styles/login.css">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
 
     <title>Bug Tracker</title>
@@ -15,13 +15,18 @@
     </div>
     
     <div id="menu">
-        <div id="button-container">
-            <a href="pages/login.html">
-                <button class="button" type="button" id="login-button"> Login</button>
-            </a>
-            <a href="pages/signup.html">
-                <button class="button" type="button" id="signup-button"> Sign up</button>
-            </a>
+        <div id="forms-container">
+            <form action="../test.html" method="post"> <!-- nu exista test.html -->
+                <div class="forms-items">
+                    <input type="text" id="username" name="username" placeholder="Username" value="" class="forms-text-input">
+                </div>
+                <div class="forms-items">
+                    <input type="text" id="password" name="password" placeholder="Password" value="" class="forms-text-input">
+                </div>
+                <div class="forms-items">
+                    <input type="submit" value="Submit" class="button" id="submit-button"> 
+                </div> 
+            </form>
         </div>
     </div>
 

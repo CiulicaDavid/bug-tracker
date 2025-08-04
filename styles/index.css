@@ -10,7 +10,7 @@ body {
 
     #header{
         display:flex;
-        height: 30vh;
+        height: 15vh;
         justify-content: center;
         align-items: center;
         font-size: 28px;
@@ -24,7 +24,7 @@ body {
 
     #menu{
         display:flex;
-        height: 55vh;
+        height: 65vh;
         justify-content: center;
     }
 
