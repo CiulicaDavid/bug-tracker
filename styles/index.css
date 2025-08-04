@@ -1,30 +1,35 @@
 /* justify-content este pentru stanga-dreapta si align-items estep entru sus-jos*/
 
+a{
+    text-decoration: none;
+}
+
 body {
     background-color: #000000;
 }
 
     #header{
         display:flex;
-        height: 15vh;
+        height: 30vh;
         justify-content: center;
         align-items: center;
-        font-size: 25px;
+        font-size: 28px;
     }
 
 #title {
     text-align: center;
-    color: #892CDC;
+    color: #BC6FF1;
+    font-family: 'Ubuntu', sans-serif;
 }
 
     #menu{
         display:flex;
-        height: 70vh;
+        height: 55vh;
         justify-content: center;
     }
 
 #button-container{
-    display:flex;
+    display:inline-flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -32,28 +37,44 @@ body {
 
 .button {
     background-color: #52057B;
-    color: #892CDC;
+    color: #BC6FF1;
 
     display: flex;
+    justify-content: center;
+    align-items: center;;
     text-align: center;
-    font-size: 20px;
+
+    width: 240px;
+    height: 80px;
+    font-size: 32px;
+    border: none;
+    border-radius: 16px;
+    margin: 0 10px;
+}
+
+.button:hover{
+    background-color: #000000;
+    transition: 0.3s ease;
 }
 
 #login-button{
-    margin-right: 10px;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 #signup-button{
-    
+    font-family: 'Ubuntu', sans-serif;
 }
 
     #about{
         display:flex;
-        height: 15vh;
+        flex-direction: column;
+        height: 10vh;
         justify-content: center;
         align-items: center;
     }
 
 .about-text{
-    color:#892CDC;
+    color:#BC6FF1;
+    font-family: 'Ubuntu', sans-serif;
+    margin: 3px;
 }
