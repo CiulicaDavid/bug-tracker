@@ -6,4 +6,4 @@ CREATE TABLE accounts(
     username VARCHAR(20) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL 
 );
---password_hash() max output can be 255 characters
+-- password_hash() max output can be 255 characters
