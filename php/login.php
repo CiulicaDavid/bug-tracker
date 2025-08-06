@@ -16,8 +16,8 @@
 
 
 
-    /*  $username = htmlspecialchars($username, ENT_QUOTES, 'UTF-8');
-        $password = htmlspecialchars($password, ENT_QUOTES, 'UTF-8');   */
+    /*  $username = filter_input(INPUT_POST, $username, FILTER_SANITIZE_SPECIAL_CHARS);
+        $password = filter_input(INPUT_POST, $password, FILTER_SANITIZE_SPECIAL_CHARS);   */
         //Sanitizes the user's input to prevent XSS attacks (only needed if input is displayed on screen) 
 
     /*  if(!preg_match('/^[a-zA-Z0-9_]{3,20}$/', $username)){
