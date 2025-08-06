@@ -1,19 +1,28 @@
 /* justify-content este pentru stanga-dreapta si align-items estep entru sus-jos*/
 
+*{
+    margin:0px;
+    padding:0px;
+    border-radius: 0px;
+}
+
 a{
     text-decoration: none;
 }
 
 body {
     background-color: #000000;
+    display: flex;
+    flex-direction: column;
 }
 
     #header{
         display:flex;
-        height: 15vh;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         font-size: 28px;
+        height: 15vh;
     }
 
 #title {
@@ -23,16 +32,20 @@ body {
 }
 
     #menu{
-        display:flex;
         height: 65vh;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
     }
 
 #button-container{
-    display:inline-flex;
+    display:flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    width: 500px;
+    max-width: 1000px;
 }
 
 .button {
@@ -49,7 +62,7 @@ body {
     font-size: 32px;
     border: none;
     border-radius: 16px;
-    margin: 0 10px;
+    gap: 10px;
 }
 
 .button:hover{
@@ -59,10 +72,12 @@ body {
 
 #login-button{
     font-family: 'Ubuntu', sans-serif;
+    display:flex;
 }
 
 #signup-button{
     font-family: 'Ubuntu', sans-serif;
+    display:flex;
 }
 
     #about{
