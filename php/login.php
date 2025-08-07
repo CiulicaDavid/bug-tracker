@@ -1,20 +1,42 @@
 <?php
+    include("db.php");
+
     if($_SERVER["REQUEST_METHOD"] === 'POST'){ 
-        $username = $_POST['username'] ?? ' ';
-        $password = $_POST['password'] ?? ' ';
+        $username = trim($_POST['username'] ?? ' ');
+        $password = trim($_POST['password'] ?? ' ');
+
+        if(empty($username) || empty($password)) 
+            die("Invalid credentials");
+
+        $safe_username = mysqli_real_escape_string($conn, $username);
+
+        $retrieve_sql = "SELECT password FROM accounts WHERE username='$safe_username'";
+        $retrieve_result = mysqli_query($conn, $retrieve_sql);
+
+        if(mysqli_num_rows($retrieve_result) === 1){
+            $row = mysqli_fetch_assoc($retrieve_result);
+            $hashed_password = $row['password'];
+        }else{
+            die("some fucker messed with the database and there 2 users with the same username");
+        }
+
+        if(!password_verify($password, $hashed_password))
+            die("YOU SHALL NOT PASS!");
+
+        header("Location: home.html");
+        exit();
     }
-    //This gets the user's input and checks that it is not null to avoid errors.
 
-    $username = trim($username);
-    $password = trim($password);
-    //This trims whitespace
+    /*
+    if($hasloggedin){
+        session_start();
+        $_SESSION["username"] = $username;
+        $_SESSION["password"] = $password;
+    }   //idek how to use this shi but ill keep it here when i decide to implement sessions
+    */
 
-    
-
-
-
-
-
+    // session_destroy();
+    // header("Location: index.html");
 
     /*  $username = filter_input(INPUT_POST, $username, FILTER_SANITIZE_SPECIAL_CHARS);
         $password = filter_input(INPUT_POST, $password, FILTER_SANITIZE_SPECIAL_CHARS);   */
