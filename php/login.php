@@ -23,7 +23,7 @@
         if(!password_verify($password, $hashed_password))
             die("YOU SHALL NOT PASS!");
 
-        header("Location: home.html");
+        header("Location: ../pages/home.html");
         exit();
     }
 

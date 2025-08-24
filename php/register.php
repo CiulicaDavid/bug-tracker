@@ -25,7 +25,7 @@
         if(!$insert_result)
             die("Error occured while inserting");
 
-        header("Location: login.html");
+        header("Location: ../pages/login.html");
         exit();
     }
 
